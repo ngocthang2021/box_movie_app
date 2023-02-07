@@ -3,6 +3,9 @@ import styled from 'styled-components';
 
 import NavbarContext from '@context/navbarContext';
 
+import Logo from './components/Logo';
+import Menu from './components/Menu';
+
 const Wrapper = styled.div`
 	max-width: 1440px;
 	width: 100%;
@@ -31,7 +34,10 @@ function Navbar() {
 	return (
 		<NavbarContext.Provider value={{ menu, setMenu }}>
 			<Wrapper>
-				<NavContainer></NavContainer>
+				<NavContainer>
+					<Logo />
+					<Menu />
+				</NavContainer>
 			</Wrapper>
 		</NavbarContext.Provider>
 	);
