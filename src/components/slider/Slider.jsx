@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled, { css } from 'styled-components';
+import { motion } from 'framer-motion';
 
 import { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -12,11 +13,13 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import SliderItem from './SliderItem';
 
 import TMDBApi from '@services/api/TMDBApi';
+import breakpoints from '@styles/breakpoints';
 
 const Wrapper = styled.div`
 	position: relative;
 
 	width: 100%;
+	padding: 0 16px;
 	margin-bottom: 32px;
 
 	& .swiper {
@@ -153,7 +156,12 @@ function Slider({ item }) {
 	console.log(data);
 
 	return (
-		<Wrapper>
+		<Wrapper
+			as={motion.div}
+			initial={{ opacity: 0, y: 20 }}
+			whileInView={{ opacity: 1, y: 0, transition: { duration: 0.25 } }}
+			viewport={{ once: true, amount: 'all' }}
+		>
 			<Header>
 				<Title>{item.title}</Title>
 				<BtnLink onClick={() => navigate(`/${item.mediaType}/${item.query}`)}>See more</BtnLink>
@@ -184,6 +192,23 @@ function Slider({ item }) {
 						swiperRef.current = swiper;
 					}}
 					module={[Navigation]}
+					breakpoints={{
+						320: {
+							slidesPerView: 1,
+						},
+						480: {
+							slidesPerView: 2,
+						},
+						765: {
+							slidesPerView: 3,
+						},
+						998: {
+							slidesPerView: 5,
+						},
+						1400: {
+							slidesPerView: 6,
+						},
+					}}
 				>
 					{data.map((item) => (
 						<SwiperSlide key={item.id}>

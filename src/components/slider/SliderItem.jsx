@@ -181,6 +181,21 @@ const Title = styled.h6`
 	overflow: hidden;
 `;
 
+const Tag = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	padding: 6px;
+	border: 2px solid ${({ theme }) => theme.colors.lightColor};
+
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 100%;
+
+	color: ${({ theme }) => theme.colors.lightColor};
+`;
+
 function SliderItem({ item, mediaType }) {
 	const navigate = useNavigate();
 
@@ -188,6 +203,7 @@ function SliderItem({ item, mediaType }) {
 	// const overview = item.overview;
 	const imagePath = item.poster_path || item.backdrop_path;
 	const imageUrl = `${TMDB_IMAGE_URL}/original${imagePath}`;
+	const language = item.original_language;
 	const ratingPoint = item.vote_average.toFixed(1);
 
 	const scoreColor = getScoreColor(ratingPoint);
@@ -204,6 +220,7 @@ function SliderItem({ item, mediaType }) {
 			<Rating scoreColor={scoreColor}>{ratingPoint}</Rating>
 			<Content>
 				<Title>{title}</Title>
+				<Tag>{language}</Tag>
 			</Content>
 		</Slide>
 	);
