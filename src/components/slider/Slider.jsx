@@ -153,7 +153,7 @@ function Slider({ item }) {
 		getList();
 	}, [item]);
 
-	console.log(data);
+	// console.log(data);
 
 	return (
 		<Wrapper
