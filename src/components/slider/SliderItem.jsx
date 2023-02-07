@@ -192,6 +192,7 @@ const Tag = styled.div`
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 100%;
+	text-transform: uppercase;
 
 	color: ${({ theme }) => theme.colors.lightColor};
 `;
