@@ -10,10 +10,9 @@ import 'swiper/css';
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
-import SliderItem from './SliderItem';
-
 import TMDBApi from '@services/api/TMDBApi';
 import breakpoints from '@styles/breakpoints';
+import MovieCard from '@components/movie/MovieCard';
 
 const Wrapper = styled.div`
 	position: relative;
@@ -212,7 +211,7 @@ function Slider({ item }) {
 				>
 					{data.map((item) => (
 						<SwiperSlide key={item.id}>
-							<SliderItem
+							<MovieCard
 								item={item}
 								mediaType={mediaType}
 							/>

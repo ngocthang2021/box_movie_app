@@ -184,7 +184,7 @@ const Text = styled.p`
 	color: ${({ theme }) => theme.colors.lightColor};
 `;
 
-function MovieCard({ item }) {
+function MovieCard({ mediaType, item }) {
 	const navigate = useNavigate();
 
 	const imagePath = item.poster_path || item.backdrop_path;
@@ -208,7 +208,7 @@ function MovieCard({ item }) {
 			</Img>
 			<Rating scoreColor={scoreColor}>{item.vote_average.toFixed(1)}</Rating>
 			<Content>
-				<Title onClick={() => navigate(`/movie/${item.id}`)}>
+				<Title onClick={() => navigate(`/${mediaType}/${item.id}`)}>
 					{item.title || item.original_title}
 				</Title>
 				<Text>{item.release_date.slice(0, 4)}</Text>
