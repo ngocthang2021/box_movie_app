@@ -60,6 +60,7 @@ function Hero() {
 			<Swiper
 				spaceBetween={0}
 				slidesPerView={1}
+				loop={true}
 				autoplay={{ delay: 5000, disableOnInteraction: false }}
 				modules={[Autoplay]}
 			>
