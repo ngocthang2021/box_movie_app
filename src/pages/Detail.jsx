@@ -411,8 +411,8 @@ function Movie() {
 	const location = useLocation();
 	const navType = useNavigationType();
 
-	console.log(location);
-	console.log(navType);
+	// console.log(location);
+	// console.log(navType);
 
 	const movieSwiperRef = useRef();
 	const castSwiperRef = useRef();
@@ -437,7 +437,7 @@ function Movie() {
 				if (!detailsResponse || !credtisResponse) throw new Error();
 
 				// console.log(detailsResponse);
-				console.log(credtisResponse);
+				// console.log(credtisResponse);
 				// console.log(similarResponse.results);
 
 				setDetail(detailsResponse);
@@ -561,7 +561,7 @@ function Movie() {
 										className='swiper-casts'
 									>
 										{casts.map((cast) => (
-											<SwiperSlide key={cast.id}>
+											<SwiperSlide key={cast.name}>
 												<CastItem>
 													<CastImg>
 														<img
@@ -638,7 +638,10 @@ function Movie() {
 									>
 										{similar.map((item) => (
 											<SwiperSlide key={item.name}>
-												<MovieCard item={item} />
+												<MovieCard
+													item={item}
+													mediaType={mediaType}
+												/>
 											</SwiperSlide>
 										))}
 									</Swiper>
