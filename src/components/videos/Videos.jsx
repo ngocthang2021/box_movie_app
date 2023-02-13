@@ -70,7 +70,7 @@ function Videos({ mediaType, id }) {
 		getVideos();
 	}, [id]);
 
-	console.log(videos);
+	// console.log(videos);
 
 	return (
 		<VideoWrapper>
