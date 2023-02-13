@@ -9,12 +9,16 @@ const lightTheme = {
 		secondaryColor: '#f25f4c',
 		grayColor: '#403d39',
 
-		lightColor: '#fffffe',
+		lightColor: '#f5f5f5',
 		darkColor: '#252422',
+
+		linearBg: 'rgba(245, 245, 245,1), rgba(245, 245, 245,0)',
+		linearLightBg: 'rgba(245, 245, 245,1), rgba(245, 245, 245,0)',
+		linearDarkBg: 'rgba(37,36,34,1), rgba(37,36,34,0)',
 
 		textColor: '#252422',
 		subTextColor: '#ccc5b9',
-		bgColor: '#fffffe',
+		bgColor: '#f5f5f5',
 
 		borderColor: '#403d39',
 		borderDarkColor: '#403d39',
@@ -31,10 +35,14 @@ const darkTheme = {
 		secondaryColor: '#f25f4c',
 		grayColor: '#403d39',
 
-		lightColor: '#fffffe',
+		lightColor: '#f5f5f5',
 		darkColor: '#252422',
 
-		textColor: '#fffffe',
+		linearBg: 'rgba(37,36,34,1), rgba(37,36,34,0)',
+		linearLightBg: 'rgba(245, 245, 245,1), rgba(245, 245, 245,0)',
+		linearDarkBg: 'rgba(37,36,34,1), rgba(37,36,34,0)',
+
+		textColor: '#f5f5f5',
 		subTextColor: '#ccc5b9',
 		bgColor: '#252422',
 
