@@ -8,6 +8,7 @@ import theme, { darkTheme, lightTheme } from '@styles/theme';
 import Global from '@styles/global';
 
 import MainLayout from '@layout/MainLayout';
+import SmoothScroll from '@components/ui/SmoothScroll';
 
 function App() {
 	const [currentTheme, setCurrentTheme] = useState('dark');
@@ -15,12 +16,14 @@ function App() {
 
 	return (
 		<Router>
-			<ThemeContext.Provider value={{ currentTheme, setCurrentTheme }}>
-				<ThemeProvider theme={{ ...theme, ...pageTheme }}>
-					<Global />
-					<MainLayout />
-				</ThemeProvider>
-			</ThemeContext.Provider>
+			<SmoothScroll>
+				<ThemeContext.Provider value={{ currentTheme, setCurrentTheme }}>
+					<ThemeProvider theme={{ ...theme, ...pageTheme }}>
+						<Global />
+						<MainLayout />
+					</ThemeProvider>
+				</ThemeContext.Provider>
+			</SmoothScroll>
 		</Router>
 	);
 }
