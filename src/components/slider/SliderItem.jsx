@@ -99,15 +99,15 @@ const Rating = styled.div`
 	align-items: center;
 	justify-content: flex-start;
 
+	width: 48px;
+	height: 48px;
 	aspect-ratio: 1/1;
 	padding: 8px;
-
 	border-radius: 50%;
 
 	font-size: 16px;
 	font-weight: 700;
 	line-height: 100%;
-	letter-spacing: 0.05em;
 	text-transform: uppercase;
 
 	color: ${({ theme }) => theme.colors.lightColor};
