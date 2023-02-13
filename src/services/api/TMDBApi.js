@@ -11,6 +11,21 @@ const TMDBApi = {
 		return axiosClient.get(url, { params });
 	},
 
+	getCredtis: (mediaType, id, params) => {
+		const url = `/${mediaType}/${id}/credits`;
+		return axiosClient.get(url, { params });
+	},
+
+	getSimilarMovies: (mediaType, id, params) => {
+		const url = `${mediaType}/${id}/similar`;
+		return axiosClient.get(url, { params });
+	},
+
+	getVideos: (mediaType, id, params) => {
+		const url = `${mediaType}/${id}/videos`;
+		return axiosClient.get(url, { params });
+	},
+
 	getLists: (mediaType, queryString, params) => {
 		const url = `/${mediaType}/${queryString}`;
 		return axiosClient.get(url, { params });
