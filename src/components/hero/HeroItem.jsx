@@ -209,6 +209,7 @@ const Buttons = styled.div`
 	gap: 24px;
 
 	margin-top: 16px;
+	border-radius: 20px;
 `;
 
 function HeroItem({ item, mediaType, isActive }) {
@@ -263,7 +264,12 @@ function HeroItem({ item, mediaType, isActive }) {
 					variants={heroItem}
 					style={{ originY: 0 }}
 				>
-					<Button onClick={() => navigate(`/${mediaType}/${item.id}`)}>Watch</Button>
+					<Button
+						btnType='primary'
+						onClick={() => navigate(`/${mediaType}/${item.id}`)}
+					>
+						Watch
+					</Button>
 				</Buttons>
 			</Content>
 		</Container>
