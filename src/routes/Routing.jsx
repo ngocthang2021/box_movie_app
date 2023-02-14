@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import Home from '@pages/Home';
-import Genres from '@pages/Genres';
 import Category from '@pages/Category';
 import Detail from '@pages/Detail';
 import Search from '@pages/Search';
@@ -14,14 +13,7 @@ function Routing() {
 				path='/'
 				element={<Home />}
 			/>
-			<Route
-				path='/genres'
-				element={<Genres />}
-			/>
-			<Route
-				path='/genres/:genreID'
-				element={<Genres />}
-			/>
+
 			<Route
 				path='/category'
 				element={<Category />}
