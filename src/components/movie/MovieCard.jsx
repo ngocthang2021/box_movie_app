@@ -11,9 +11,8 @@ import ImageNotSupportedRoundedIcon from '@mui/icons-material/ImageNotSupportedR
 const Card = styled.div`
 	position: relative;
 
-	max-width: 280px;
+	min-width: 250px;
 	height: 350px;
-	margin: 0 auto;
 	border-radius: 16px;
 
 	&::after {
