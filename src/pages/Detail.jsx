@@ -120,7 +120,7 @@ const Tags = styled.div`
 `;
 
 // Tag Link
-const Link = styled(NavLink)`
+const Link = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -472,11 +472,11 @@ function Movie() {
 
 	return (
 		<SmoothScroll>
-			<Section>
-				{loading ? <Loader /> : <Bg url={`${TMDB_IMAGE_URL}/original${bgImgPath}`} />}
-				{loading ? (
-					<Loader />
-				) : (
+			{loading ? (
+				<Loader />
+			) : (
+				<Section>
+					<Bg url={`${TMDB_IMAGE_URL}/original${bgImgPath}`} />
 					<Container>
 						<Header>
 							<Title>{title}</Title>
@@ -486,7 +486,7 @@ function Movie() {
 									{genres.map((genre) => (
 										<Link
 											key={genre.id}
-											to={`/genres/${genre.id}`}
+											// to={`/genres/${genre.id}`}
 										>
 											{genre.name}
 										</Link>
@@ -629,10 +629,10 @@ function Movie() {
 												slidesPerView: 3,
 											},
 											998: {
-												slidesPerView: 5,
+												slidesPerView: 4,
 											},
 											1400: {
-												slidesPerView: 6,
+												slidesPerView: 5,
 											},
 										}}
 									>
@@ -649,8 +649,8 @@ function Movie() {
 							</Content>
 						</Body>
 					</Container>
-				)}
-			</Section>
+				</Section>
+			)}
 		</SmoothScroll>
 	);
 }
