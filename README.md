@@ -1,3 +1,21 @@
+### BOX MOVIE APP 
+
+- Website for users to search for movie's information (casts, videos, related movies...).
+
+- This Website uses data from TMDB API (https://www.themoviedb.org/)
+
+- Library/Framework that I used in this project: 
+ + Axios for data fetching.
+ + Styled-components for styling.
+ + SwiperJS for creating Sliders.
+ + Framer-motion for making animations and transitions.
+ + MUI Icons for icons.
+ + React-router for setting Routing.
+ + Babel, Craco for project's configuration (path alias).
+
+
+##########################################################################################
+ 
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
