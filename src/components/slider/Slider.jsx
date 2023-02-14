@@ -11,8 +11,10 @@ import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 
 import TMDBApi from '@services/api/TMDBApi';
-import breakpoints from '@styles/breakpoints';
+
 import MovieCard from '@components/movie/MovieCard';
+
+import breakpoints from '@styles/breakpoints';
 
 const Wrapper = styled.div`
 	position: relative;
@@ -115,11 +117,19 @@ const SlideBtn = styled.button`
 				return css`
 					left: 0;
 					transform: translate(-50%, -50%);
+
+					@media screen and (max-width: ${breakpoints.sm}) {
+						transform: translate(-10%, -50%);
+					}
 				`;
 			case 'next':
 				return css`
 					right: 0;
 					transform: translate(50%, -50%);
+
+					@media screen and (max-width: ${breakpoints.sm}) {
+						transform: translate(10%, -50%);
+					}
 				`;
 		}
 	}}
@@ -202,10 +212,10 @@ function Slider({ item }) {
 							slidesPerView: 3,
 						},
 						998: {
-							slidesPerView: 5,
+							slidesPerView: 4,
 						},
 						1400: {
-							slidesPerView: 6,
+							slidesPerView: 5,
 						},
 					}}
 				>
