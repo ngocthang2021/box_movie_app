@@ -173,7 +173,7 @@ function Slider({ item }) {
 		>
 			<Header>
 				<Title>{item.title}</Title>
-				<BtnLink onClick={() => navigate(`/${item.mediaType}/${item.query}`)}>See more</BtnLink>
+				<BtnLink onClick={() => navigate(`/category/${item.query}`)}>See more</BtnLink>
 			</Header>
 
 			<SlideWrapper>
