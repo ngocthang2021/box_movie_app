@@ -40,7 +40,7 @@ function Routing() {
 				element={<Search />}
 			/>
 			<Route
-				path='/search/:searchQuery'
+				path='/:mediaType/search/:searchQuery'
 				element={<Search />}
 			/>
 		</Routes>
