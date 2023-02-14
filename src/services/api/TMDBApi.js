@@ -31,9 +31,9 @@ const TMDBApi = {
 		return axiosClient.get(url, { params });
 	},
 
-	getSearch: (query, searchQuery) => {
-		const url = `/search/${query}/${searchQuery}`;
-		return axiosClient.get(url);
+	getSearch: (query, params) => {
+		const url = `/search/${query}`;
+		return axiosClient.get(url, { params });
 	},
 
 	getCollections: (collectionId, params) => {
