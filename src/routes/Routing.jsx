@@ -27,7 +27,7 @@ function Routing() {
 				element={<Category />}
 			/>
 			<Route
-				path='/category/:mediaType'
+				path='/category/:query'
 				element={<Category />}
 			/>
 
